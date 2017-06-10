@@ -11,17 +11,17 @@ export default function reducer(state={
     switch(action.type){
         case 'HIT_DRAGON':{
             //play dragon hit audio
-            const hitAudio = new Audio('/sounds/sword.mp3');
+            const hitAudio = new Audio('./sounds/sword.mp3');
             hitAudio.play();
             if(state.dragonHitpoints-action.payload.damage < 0){
                 //dragon is dead
-                const winAudio = new Audio('/sounds/win.wav');
+                const winAudio = new Audio('./sounds/win.wav');
                 winAudio.play();
                 return {...state, dragonHitpoints: 0, wasHit: true}
             }else{
                 if(state.dragonHitpoints == action.payload.damage){
                     //dragon is dead
-                    const winAudio = new Audio('/sounds/win.wav');
+                    const winAudio = new Audio('./sounds/win.wav');
                     winAudio.play();
                 }
                 return {...state, dragonHitpoints: (state.dragonHitpoints-action.payload.damage), wasHit: true};
