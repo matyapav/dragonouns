@@ -1,0 +1,132 @@
+
+@keyframes sword-swing {
+    0%   { transform:rotate(0deg); left: -200px;}
+    25%  { transform:rotate(45deg);left:0;}
+    75%  { transform:rotate(45deg);left: 200px;}
+    100% { transform:rotate(0deg);left:-200px;}
+}
+
+#sword-hit{
+    background: url("../images/sword.png") no-repeat;
+    width: 280px;
+    height: 400px;
+    left: -200px;
+    position: relative;
+    z-index: 10;
+    animation-name: sword-swing;
+    animation-duration: 1s;
+}
+
+#active-noun{
+    color: #137334;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ffffff;
+    background-color: #ffffff;
+    border-radius: 50px;
+}
+
+.word-panel {
+    display: inline-block;
+    width: 100%;
+}
+
+
+@keyframes dragon-fly { 
+    0%   { top:0}
+    50%  { top:20px}
+    100% { top:0}
+}
+
+
+#dragon  {
+    background: url("../images/dragon.png") no-repeat;
+    height: 500px;
+    width: 550px;
+    margin:auto;
+    position:relative;
+    animation-name: dragon-fly;
+    animation-duration: 1s;
+    animation-iteration-count: infinite
+}
+#dragon-hit {
+    background: url("../images/dragon_hit.png") no-repeat;
+    height: 500px;
+    width: 550px;
+    margin:auto
+}
+#dragon-dead {
+    background: url("../images/dragon_dead.png") no-repeat;
+    height: 300px;
+    width: 550px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 200px
+}
+
+#fight-place {
+    width: 50%;
+    float: right;
+}
+
+#status {
+    width: 50%;
+}
+
+#life {
+    width: 80%;
+    margin: auto;
+}
+
+#life > div {
+    height: 50px;
+}
+
+#life > div h4 {
+    position:absolute;
+    width: 40%
+}
+
+#life h1 {
+    color: #ff0000;
+}
+
+.set-selected {
+    font-weight: bold;
+    font-size: large;
+}
+
+.error {
+    color:red;
+}
+
+input[type="file"] {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.import {
+    padding: 20px;
+}
+
+#progress_bar {
+    padding: 3px;
+    border: 1px solid #000;
+    font-size: 14px;
+    clear: both;
+    opacity: 0;
+    height: 0;
+    -moz-transition: opacity 0.5s linear;
+    -o-transition: opacity 0.5s linear;
+    -webkit-transition: opacity 0.5s linear;
+}
+#progress_bar.loading {
+    opacity: 1.0;
+    height: auto;
+}
+#progress_bar .percent {
+    background-color: #ffffff;
+    height: auto;
+    width: 0;
+    display: inline-block;
+}
